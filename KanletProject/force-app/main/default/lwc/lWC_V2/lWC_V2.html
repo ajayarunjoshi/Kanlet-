@@ -1,0 +1,24 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-10-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="INPUT">
+        <lightning-input label="Enter First Number" onchange={aval}></lightning-input>
+        <lightning-input label="Enter Second Number" onchange={bval}></lightning-input>
+
+        <lightning-button label="Calculate" onclick={clacme}></lightning-button>
+
+
+        <p>************************$$$$$$$$$ Result $$$$$$$$$$$$$**************************</p>
+
+
+        The Addition is :   {AddRes}      <p></p>
+        The Substraction is: {AddSub}     <p></p>
+        The Muliplication is :{AddMul}    <p></p>
+        The Division is : {AddDiv}        <p></p>
+    </lightning-card>
+</template>

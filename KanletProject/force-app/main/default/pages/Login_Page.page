@@ -1,0 +1,17 @@
+<apex:page >
+    <apex:image value="{!$Resource.Logo214}" height="100" width="300"/>
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <table>
+                    <div>
+                       <apex:inputText label="Username" />
+                   <apex:inputText label="Password"/>   
+                     <apex:inputCheckbox /> 
+                    </div>
+                     
+                </table>    
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

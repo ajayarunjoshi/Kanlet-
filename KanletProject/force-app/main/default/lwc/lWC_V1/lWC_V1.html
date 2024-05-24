@@ -1,0 +1,39 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-10-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Variablels - Primitive data">
+        My name : {name}  <p></p>
+        My city : {city}  <p></p>
+        My age  : {age}   <p></p>
+        My Salary:{sal}   <p></p>
+
+        <lightning-button label="Submit" onclick={subme} > </lightning-button>
+    </lightning-card>
+
+        <lightning-card title="variables- Array Data">
+
+            List of cities :{cities} <!--This will not work-->
+            <!--Way1 : for Each-->
+             <template for:each={cities} for:item=c>         
+               <p key={c}>{c}</p>
+            </template> 
+        <p>********************************************************************</p>    
+            <!--Way2 : Iterator-->
+            <template iterator:item={cities}>
+                <p key={item.value}>{item.value}</p>
+             </template>
+
+        </lightning-card>
+
+      <lightning-card title="Variables - JOSN Data">
+           Student name:{Student.name}    <p></p>
+           Student Class:{Student.class}  <p></p>
+           Student Age:{Student.age}      <p></p>
+           Student City:{Student.city}    <p></p>
+      </lightning-card>
+</template>

@@ -1,0 +1,17 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock title="Calculator">
+            <apex:pageBlockSection columns="1" title="Grater or Smaller">
+                <apex:inputText label="Enter First Number"/>
+                <apex:inputText label="Enter Second Number"/>
+                <apex:inputText label="Enter Third Number"/>
+                <apex:selectRadio label="Select">
+                    <apex:selectOption itemLabel="Grater" itemValue="G"/>
+                    <apex:selectOption itemLabel="Smaller" itemValue="S"/>
+                </apex:selectRadio>
+                <apex:commandButton value="CALCULATE"/>
+                <apex:outputText label="The Result Is"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

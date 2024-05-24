@@ -1,0 +1,16 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-24-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div>
+        <p>{timeRemaining}</p>
+        <lightning-button-group>
+            <lightning-button label="Start" onclick={handleStart} disabled={isCounting}></lightning-button>
+            <lightning-button label="End" onclick={handleEnd} disabled={isNotCounting}></lightning-button>
+        </lightning-button-group>
+    </div>
+</template>

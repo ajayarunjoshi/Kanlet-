@@ -1,0 +1,14 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock title="SimpleInt"> 
+            <apex:pageBlockSection columns="1">
+                <apex:inputText label="Enter The Amount"/>
+                <apex:inputText label="Enter The Period"/>
+                <apex:inputText label="Enter The Rate of Int"/>
+                <apex:commandButton value="Calculate"/>
+                <apex:outputText label="The Int Component is "></apex:outputText>
+                <apex:outputText label="The Int Maturity Amount is "></apex:outputText>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>>
+</apex:page>

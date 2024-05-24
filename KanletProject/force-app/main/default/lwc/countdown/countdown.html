@@ -1,0 +1,26 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-24-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <div class="container">
+        <div class="login-form">
+            <h1>Login</h1>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" value={username} onchange={handleUsernameChange} />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" value={password} onchange={handlePasswordChange} />
+            </div>
+            <div class="form-group">
+                <lightning-button label="Login" variant="brand" onclick={handleLogin}></lightning-button>
+            </div>
+            <p if:true={showError} class="error">Please enter both username and password.</p>
+        </div>
+    </div>
+</template>

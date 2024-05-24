@@ -1,0 +1,8 @@
+<apex:page standardController="Account" sidebar="false" showHeader="false">
+    <apex:dataTable value="{!Account.Contacts}" var="SK" border="5px" bgcolor="Red">
+        <apex:column value="{!SK.FirstName}" headerValue="Contact First Name"/>
+        <apex:column value="{!SK.LastName}" headerValue="Last name" />    
+        <apex:column value="{!SK.Email}" headerValue="Email" />
+    </apex:dataTable>
+        
+</apex:page>

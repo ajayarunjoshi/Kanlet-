@@ -1,0 +1,30 @@
+<apex:page standardController="Account">
+    
+    <apex:pageBlock Title="Account Information" > 
+        <apex:pageBlockSection Title="General Account Information" columns="2">
+            <apex:outputField value="{!Account.Name}"/>
+            <apex:outputField value="{!Account.Fax}"/>
+            <apex:outputField value="{!Account.sic}"/>
+            <apex:outputField value="{!Account.Description}"/>
+            <apex:outputField value="{!Account.Rating}"/>
+            <apex:outputField value="{!Account.BillingCity}"/>
+            
+        </apex:pageBlockSection>
+        <apex:pageBlockSection Title="Account Operation Informat ">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection Title="To be decided Later">
+           </apex:pageBlockSection>
+        
+             </apex:pageBlock>
+    
+    <apex:pageBlock Title="Account Related Contact "> 
+        <apex:pageBlockSection Title="Contact Information">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection Title="To be decided Later">
+        </apex:pageBlockSection>
+        <apex:pageBlockSection Title="To be decided Later">
+            </apex:pageBlockSection>
+        
+              </apex:pageBlock>
+    
+</apex:page>

@@ -1,0 +1,28 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 07-24-2023
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Login Page">
+        <template if:true={isLoggedIn}>
+            <div class="timer-container">
+                <p class="timer"><b>{timeRemaining}</b></p>
+                <lightning-button-group>
+                    <lightning-button label="Start" onclick={handleStart} disabled={isCounting}></lightning-button>
+                    <lightning-button label="End" onclick={handleEnd} disabled={isNotCounting}></lightning-button>
+                </lightning-button-group>
+            </div>
+        </template>
+        <template if:false={isLoggedIn}>
+            <div class="login-form">
+                <p if:true={showError} class="error">Please enter valid credentials.</p>
+                <lightning-input type="text" label="Username" value={username} onchange={handleUsernameChange}></lightning-input>
+                <lightning-input type="password" label="Password" value={password} onchange={handlePasswordChange}></lightning-input>
+                <lightning-button label="Login" onclick={handleLogin}></lightning-button>
+            </div>
+        </template>
+    </lightning-card>
+</template>

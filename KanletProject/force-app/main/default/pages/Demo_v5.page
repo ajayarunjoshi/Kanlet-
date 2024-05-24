@@ -1,0 +1,22 @@
+<apex:page >
+    <apex:form >
+        <apex:pageBlock title="Calculator">
+            <apex:pageBlockSection title="ADDITION ,MILTIPLICATION , DIVISION And SUBSTARACTION" columns="1">
+                <apex:inputText label="Enter First Number"/>
+                <apex:inputText label="Enter Second Number"/>
+                
+                
+                <apex:selectRadio label="Select">
+                    <apex:selectOption itemLabel="Add" itemValue="AD"></apex:selectOption>
+                    <apex:selectOption itemLabel="Substarat" itemValue="Sb"></apex:selectOption>
+                    <apex:selectOption itemLabel="Miltiplication" itemValue="ML"></apex:selectOption>
+                    <apex:selectOption itemLabel="Division" itemValue="div"></apex:selectOption>
+                </apex:selectRadio>
+                 
+                <apex:commandButton value="Calculate"/>
+                    
+                <apex:outputText label="The Result Is" ></apex:outputText>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

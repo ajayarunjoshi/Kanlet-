@@ -1,0 +1,112 @@
+<apex:page standardController="Account" showHeader="false">
+    <apex:stylesheet value="!$Resource.MyStl"/> 
+    <div class="MyDabba">
+        <b>User Logged In :</b>{!$User.FirstName} &nbsp;{!$User.LastName} <b/>
+        <b> Email:</b> {!$User.Email}
+    </div>
+    <apex:image value="{!$Resource.Krios}" height="500" width="1100"/>
+    <apex:iframe src="https://kriosispl.com/index.html" height="700" scrolling="true" width="1400"/>
+    <p></p>
+    <h1>
+        KRIOS
+    </h1> <br/>
+    <h1>
+         <apex:outputLink value="http://www.unipune.ac.in/"> Click Here to Krios Home Page </apex:outputLink>
+    </h1>
+   
+    <apex:tabPanel >
+        
+         <apex:tab label="Tab 1.....Account Creation" title="This tab used to create Account" styleClass="MyTab">
+            <apex:form >
+         <div Class ="MyBlock">
+                    <apex:pageBlock title="Account">
+                   <apex:pageBlockSection title="NEW ACCOUNT" columns="1">
+                       <apex:inputField value="{!Account.Name}" style=" background-color: orange; font-size: 30px;color:Black"/>
+                       <apex:inputField value="{!Account.Phone}" style=" background-color: orange; font-size: 30px;color:Black"/>
+                       <apex:inputField value="{!Account.Rating}" style="background-color: orange; font-size: 30px;color:Black"/>
+                       <apex:inputField value="{!Account.BillingCity}" styleClass="MyHeroStyle"/>
+                       <apex:inputField value="{!Account.BillingCountry}" styleClass="MyHeroStyle"/>
+                       <apex:inputField value="{!Account.Fax}" styleClass="MyHeroStyle"/>
+                       <apex:inputField value="{!Account.Industry}" />
+                       <apex:inputField value="{!Account.Sic}" styleClass="MyHeroStyle"/>
+                     
+                       <apex:inputText label="Enter Length " value="{!Account.Description}"/>
+                       <apex:inputText label="Enter Bredth"/>
+                       <apex:commandButton value="Ok" action="{!Save}"/>
+                       <apex:commandLink value="Ok" action="{!Save}" />
+                       <apex:inputTextarea label="Text" cols="50" rows="15" richText="true" value="{!Account.Description}"/>
+                       <apex:inputSecret label=" Enter Password"/>
+                       <apex:inputHidden /> 
+                       
+                        <apex:selectRadio label="Select" layout="PageDirection">
+                            <apex:selectOption itemLabel="Salesforce" itemValue="sfdc"/>
+                            <apex:selectOption itemLabel="Microsoft .Net" itemValue="Net"/>
+                            <apex:selectOption itemLabel="Java" itemValue="Ja"/>
+                            <apex:selectOption itemLabel="SAP CRM" itemValue="SAP"/>
+                            <apex:selectOption itemLabel="Not" itemValue="Not"/>
+                            
+                       </apex:selectRadio>
+                       
+                       <apex:selectCheckboxes label="Select" layout="PageDirection">
+                            <apex:selectOption itemLabel="Salesforce" itemValue="sfdc"/>
+                            <apex:selectOption itemLabel="Microsoft .Net" itemValue="Net"/>
+                            <apex:selectOption itemLabel="Java" itemValue="Ja"/>
+                            <apex:selectOption itemLabel="SAP CRM" itemValue="SAP"/>
+                            <apex:selectOption itemLabel="Not" itemValue="Not"/>
+                       </apex:selectCheckboxes>
+                       
+                       
+                       
+                       
+                       
+                       
+                    </apex:pageBlockSection>
+                </apex:pageBlock>
+             
+         </div>
+            </apex:form>
+           </apex:tab>
+        
+        <apex:tab label="Tab 2.....ABCD">
+        </apex:tab>
+        <apex:tab label="Tab 3.....Account Display" title="This tab display Account Data">
+            <apex:pageBlock title="Account Details">
+                <apex:pageBlockSection title="Account Information  " columns="1">
+                    
+                    <apex:outputField value="{!Account.Phone}"/>
+                    <apex:outputField value="{!Account.Rating}"/>
+                    <apex:outputField value="{!Account.BillingCity}"/>
+                    <apex:outputField value="{!Account.BillingCountry}"/>
+                    <apex:outputField value="{!Account.Fax}"/>
+                    <apex:outputField value="{!Account.Industry}"/>
+                    <apex:outputField value="{!Account.Sic}"/>
+                    
+                </apex:pageBlockSection>
+                <apex:pageBlockSection title="Account Related Information " columns="1">
+                    <apex:pageBlockTable value="{!Account.Contacts}" var="AJ">
+                        <apex:column value="{!AJ.FirstName}" headerValue="Contact First Name" width="100"/>
+                        <apex:column value="{!AJ.LastName}"/>
+                        <apex:column value="{!AJ.Email}"/>
+                        <apex:column value="{!AJ.Phone}"/>
+                        <apex:column value="{!AJ.MobilePhone}"/>
+                    </apex:pageBlockTable>
+                    <apex:dataTable value="{!Account.Contacts}" var="AJ" border="2px">
+                        <apex:column value="{!AJ.FirstName}" headerValue="Contact First Name" width="100"/>
+                        <apex:column value="{!AJ.LastName}" headerValue="LastName"/>
+                        <apex:column value="{!AJ.Email}" headerValue="Email"/>
+                        <apex:column value="{!AJ.Phone}" headerValue="Phone"/>
+                        <apex:column value="{!AJ.MobilePhone}" headerValue="MobilePhone"/>  
+                        
+                    </apex:dataTable>
+                    <apex:dataList value="{!Account.Contacts}" var="AJ">
+                      <b> Name</b>{!AJ.FirstName}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{!AJ.LastName}&nbsp;&nbsp;&nbsp;&nbsp;<b>Email</b>    {!AJ.Email}       {!AJ.Phone}       {!AJ.MobilePhone}
+                    </apex:dataList>
+                    <apex:listViews type="Opportunity"/> 
+                    <apex:pageBlockSection >
+                        <apex:detail />
+                    </apex:pageBlockSection>
+                </apex:pageBlockSection>
+            </apex:pageBlock> 
+        </apex:tab>
+    </apex:tabPanel>  
+</apex:page>

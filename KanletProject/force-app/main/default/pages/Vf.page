@@ -1,0 +1,10 @@
+<apex:page >
+    <form><br/>
+        <input type="radio" id="html" name="fav_language" value="HTML"/>
+        <label for="html">a</label><br/>
+        <input type="radio" id="html" name="fav_language" value="HTML"/>
+        <label for="html">H</label><br/>
+        <input type="radio" id="html" name="fav_language" value="HTML"/>
+        <label for="html">b</label>
+    </form>
+</apex:page>

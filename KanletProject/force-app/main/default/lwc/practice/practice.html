@@ -1,0 +1,36 @@
+<!--
+  @description       : 
+  @author            : ChangeMeIn@UserSettingsUnder.SFDoc
+  @group             : 
+  @last modified on  : 04-19-2024
+  @last modified by  : ChangeMeIn@UserSettingsUnder.SFDoc
+-->
+<template>
+    <lightning-card title="Contact Management" icon-name="standard:contact">
+        <!-- Add Contact Section -->
+        <div class="slds-p-around_medium">
+            <!-- Form to add a new contact -->
+            <!-- Fields for entering contact details -->
+            <!-- Add Contact button -->
+            <lightning-button
+                class="slds-float_right"
+                variant="brand"
+                label="Add Contact"
+                title="Add Contact"
+                onclick={handleAddContact}>
+            </lightning-button>
+        </div>
+
+        <!-- List of Contacts Section -->
+        <div class="slds-p-around_medium">
+            <!-- Filter options for contacts -->
+            <!-- Contact list with filtering options -->
+            <lightning-datatable
+                if:true={contactList}
+                data={contactList}
+                columns={columns}
+                key-field="Id">
+            </lightning-datatable>
+        </div>
+    </lightning-card>
+</template>
